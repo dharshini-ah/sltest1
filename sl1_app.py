@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import yfinance as yf
+import base64
+
 
 st.write('New app demo')
 
