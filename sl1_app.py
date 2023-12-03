@@ -33,9 +33,12 @@ def create_new_database(engine_path):
     except Exception as e:
         print(f"An error occurred while deleting {engine_path}: {str(e)}")
 
-dir_path = f'.'
+#Boardgames/auto-setup/gamessqlite.db
+
+dir_path = f'https://github.com/dharshini-ah/sltest1'
 market = 'nasdaq'
 engine_path = f'{dir_path}/{market}.db'
+
 create_new_database(engine_path) #This is peformed when you try to get fresh copy of the data
 
 conn = sqlite3.connect(engine_path)
