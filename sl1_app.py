@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import yfinance as yf
 import base64
+import sqlite3
+
 
 
 st.write('New app demo')
@@ -11,16 +13,9 @@ df = yf.download('AAPL', start=pd.to_datetime(max_date))
 
 st.write(df)
 
-#csv = df.to_csv().encode()
-#b64 = base64.b64encode(csv).decode()
-#href = f'Download CSV File'
-#st.markdown(href, unsafe_allow_html=True)
-
-
+# Code to download file
 def get_table_download_link_csv(df):
-    #csv = df.to_csv(index=False)
     csv = df.to_csv().encode()
-    #b64 = base64.b64encode(csv.encode()).decode() 
     b64 = base64.b64encode(csv).decode()
     href = f'<a href="data:file/csv;base64,{b64}" download="captura.csv" target="_blank">Download csv file</a>'
     return href
