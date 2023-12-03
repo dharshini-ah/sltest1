@@ -38,9 +38,9 @@ engine_path = f'{dir_path}/{market}.db'
 
 create_new_database(engine_path) #This is peformed when you try to get fresh copy of the data
 
-conn = sqlite3.connect(engine_path)
-cursor = conn.cursor()
+#conn = sqlite3.connect(engine_path)
+#cursor = conn.cursor()
 
-if not df.empty:
-    df.to_sql(name='AAPL', con=conn, if_exists='append', index_label='Date')
+#if not df.empty:
+#    df.to_sql(name='AAPL', con=conn, if_exists='append', index_label='Date')
 
