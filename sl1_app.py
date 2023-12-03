@@ -25,7 +25,7 @@ st.markdown(get_table_download_link_csv(df), unsafe_allow_html=True)
 
 def create_new_database(engine_path):
     try:
-        print('Inside create_new_database')
+        print('1 Inside create_new_database')
         stock='AAPL'
         conn = sqlite3.connect(engine_path)
         cursor = conn.cursor()
