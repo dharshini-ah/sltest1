@@ -22,3 +22,19 @@ def get_table_download_link_csv(df):
 
 st.markdown(get_table_download_link_csv(df), unsafe_allow_html=True)
 
+def create_new_database(engine_path):
+    try:
+        if os.path.exists(engine_path):
+            # Delete the file
+            os.remove(engine_path)
+            print(f"{engine_path} has been deleted.")
+        conn = sqlite3.connect(engine_path)
+        conn.close()
+    except Exception as e:
+        print(f"An error occurred while deleting {engine_path}: {str(e)}")
+
+dir_path = f'.'
+market = 'nasdaq'
+engine_path = f'{dir_path}/{market}.db'
+create_new_database(engine_path) #This is peformed when you try to get fresh copy of the data
+
