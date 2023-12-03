@@ -4,6 +4,9 @@ import yfinance as yf
 import base64
 import sqlite3
 import os
+import ta
+import numpy as np
+from datetime import datetime
 
 
 
@@ -14,6 +17,17 @@ df = yf.download('AAPL', start=pd.to_datetime(max_date))
 
 st.write(df)
 
+
+
+
+
+
+
+
+
+
+
+
 # Code to download file
 def get_table_download_link_csv(df):
     csv = df.to_csv().encode()
@@ -22,6 +36,24 @@ def get_table_download_link_csv(df):
     return href
 
 st.markdown(get_table_download_link_csv(df), unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def create_new_database(engine_path):
     try:
