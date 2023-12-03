@@ -34,7 +34,7 @@ def create_new_database(engine_path):
 
 dir_path = f'https://github.com/dharshini-ah/sltest1'
 market = 'nasdaq'
-engine_path = f'{dir_path}/{market}.db'
+engine_path = f'{dir_path}/{market}_1d.db'
 
 create_new_database(engine_path) #This is peformed when you try to get fresh copy of the data
 
