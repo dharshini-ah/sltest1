@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as py
+import pandas as pd
 import yfinance as yf
 
 st.write('New app demo')
