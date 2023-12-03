@@ -586,10 +586,11 @@ end_date = '2024-01-01'
 
 start_date = '2023-10-01' #To process today data
 
-
+print('Entering main process')
 dfRet, dfDetail_Ret = main_process(market, ref_stock, all_new_db, update_latest_data, dir_path, slpercentage,cur_approach,min_ibs, max_ibs, start_date, end_date, sma_duration)
 dfSum = pd.concat([dfSum,dfRet])
 dfSum_Detail = pd.concat([dfSum_Detail,dfDetail_Ret])
+print('Completed main process')
 
 current_datetime = datetime.now()
 formatted_datetime = current_datetime.strftime("%Y_%m_%d_%H_%M_%S")
