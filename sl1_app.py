@@ -34,7 +34,11 @@ def create_new_database(engine_path):
         #cursor.execute(f'SELECT MAX(Date) FROM "{stock}"')
         #max_date = cursor.fetchone()[0]
         #print(max_date)
-        print(cursor.fetchone())
+        #print(cursor.fetchone())
+        table_names = cursor.fetchall()
+        for name in table_names:
+            print(name[0])
+    
         conn.close()
     except Exception as e:
         print(f"An error occurred while deleting {engine_path}: {str(e)}")
