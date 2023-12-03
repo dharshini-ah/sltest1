@@ -30,7 +30,7 @@ def create_new_database(engine_path):
         conn = sqlite3.connect(engine_path)
         cursor = conn.cursor()
         
-        cursor.execute(f'SELECT name FROM sqlite_master WHERE type='table')
+        cursor.execute(f'SELECT name FROM sqlite_master WHERE type="table"')
         #cursor.execute(f'SELECT MAX(Date) FROM "{stock}"')
         #max_date = cursor.fetchone()[0]
         #print(max_date)
