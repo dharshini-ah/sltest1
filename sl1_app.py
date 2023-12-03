@@ -5,9 +5,9 @@ import yfinance as yf
 st.write('New app demo')
 
 max_date = '2023-11-01'
-new_data = yf.download('AAPL', start=pd.to_datetime(max_date))
+df = yf.download('AAPL', start=pd.to_datetime(max_date))
 
-st.write(new_data)
+st.write(df)
 
 csv = df.to_csv().encode()
 b64 = base64.b64encode(csv).decode()
