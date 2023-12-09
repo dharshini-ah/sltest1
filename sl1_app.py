@@ -99,6 +99,7 @@ def preprocess_data(market,engine_path,start_date,end_date,create_new_db,update_
     try:
         stock_list = get_stock_list(market)
         print(stock_list)
+        stock_list = ['CSX']
         if create_new_db:
             create_new_database(engine_path) #This is peformed when you try to get fresh copy of the data
             conn = sqlite3.connect(engine_path)
