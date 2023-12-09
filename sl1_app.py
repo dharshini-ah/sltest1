@@ -548,11 +548,12 @@ def main_process(market, ref_stock, create_new_db, update_latest_data, dir_path,
   engine_path = f'{dir_path}/Data_BLSH/{market}.db'
 
   preprocess_data(market,engine_path,start_date,end_date,create_new_db,update_latest_data)
-  process_data(market,engine_path,dir_path,slpercentage,cur_approach, min_ibs, max_ibs,start_date,end_date,sma_duration)
-  get_favorable_trades(market,dir_path,ref_stock, engine_path)
-  get_max_invested_amount(market,dir_path,engine_path,step_up_amount)
-  dfRet, dfDetail_Ret = find_action_on_date(market,dir_path,engine_path,ref_stock)
-  return dfRet, dfDetail_Ret
+  #process_data(market,engine_path,dir_path,slpercentage,cur_approach, min_ibs, max_ibs,start_date,end_date,sma_duration)
+  #get_favorable_trades(market,dir_path,ref_stock, engine_path)
+  #get_max_invested_amount(market,dir_path,engine_path,step_up_amount)
+  #dfRet, dfDetail_Ret = find_action_on_date(market,dir_path,engine_path,ref_stock)
+  #return dfRet, dfDetail_Ret
+  return None, None
 
 
 dfSum=pd.DataFrame()
